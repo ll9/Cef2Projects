@@ -38,4 +38,5 @@ private void Form1_FormClosing(object sender, FormClosingEventArgs e)
 Also make sure that either both projects support any CPU or Both projects use x86 or x64.
 
 ![img](./resources/x86-2.PNG)
+
 ![img](./resources/x86.PNG)
