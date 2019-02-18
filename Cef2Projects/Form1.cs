@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,10 +30,18 @@ namespace Cef2Projects
             CefSettings settings = new CefSettings();
             // Initialize cef with the provided settings
             Cef.Initialize(settings);
+
+            String page = string.Format(@"{0}\wwwroot\index.html", Application.StartupPath);
+            //String page = @"C:\Users\SDkCarlos\Desktop\artyom-HOMEPAGE\index.html";
+
+            if (!File.Exists(page))
+            {
+                MessageBox.Show("Error The html file doesn't exists : " + page);
+            }
             // Create a browser component
-            chromeBrowser = new ChromiumWebBrowser("http://ourcodeworld.com");
+            chromeBrowser = new ChromiumWebBrowser(page);
             // Add it to the form and fill it to the form window.
-            this.Controls.Add(chromeBrowser);
+            panel1.Controls.Add(chromeBrowser);
             chromeBrowser.Dock = DockStyle.Fill;
         }
 
