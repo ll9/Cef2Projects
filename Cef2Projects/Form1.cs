@@ -40,9 +40,18 @@ namespace Cef2Projects
             }
             // Create a browser component
             chromeBrowser = new ChromiumWebBrowser(page);
+            chromeBrowser.LoadingStateChanged += ChromeBrowser_LoadingStateChanged;
             // Add it to the form and fill it to the form window.
             panel1.Controls.Add(chromeBrowser);
             chromeBrowser.Dock = DockStyle.Fill;
+        }
+
+        private void ChromeBrowser_LoadingStateChanged(object sender, LoadingStateChangedEventArgs e)
+        {
+            if (e.IsLoading == false)
+            {
+                chromeBrowser.ShowDevTools();
+            }
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)

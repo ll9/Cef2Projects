@@ -3,9 +3,13 @@
 <head>
     <link rel="stylesheet" href="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/css/ol.css" type="text/css">
     <style>
-        .map {
+        * {
+            box-sizing: border-box;
+        }
+        html, body, .map {
+            min-height: 100% !important;
             height: 100%;
-            width: 100%;
+            margin: 0;
         }
     </style>
     <script src="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/build/ol.js"></script>
