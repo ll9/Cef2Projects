@@ -1,5 +1,6 @@
 ﻿using CefSharp;
 using CefSharp.WinForms;
+using SecondCefProject;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -38,6 +39,11 @@ namespace Cef2Projects
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             Cef.Shutdown();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            new SecondForm(new ChromiumWebBrowser("https://stackoverflow.com/questions/51079522/asp-core-2-1-email-confirmation")).ShowDialog();
         }
     }
 }
