@@ -43,7 +43,7 @@ namespace Cef2Projects
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //new SecondForm(new ChromiumWebBrowser("https://stackoverflow.com/questions/51079522/asp-core-2-1-email-confirmation")).ShowDialog();
+            new SecondForm(new ChromiumWebBrowser("https://stackoverflow.com/questions/51079522/asp-core-2-1-email-confirmation")).ShowDialog();
         }
     }
 }

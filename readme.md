@@ -40,3 +40,7 @@ Also make sure that either both projects support any CPU or Both projects use x8
 ![img](./resources/x86-2.PNG)
 
 ![img](./resources/x86.PNG)
+
+## CefDowngrade
+
+Damit die beiden Instanzen laufen können müssen/sollten auch die selben CefVersionen installiert sein. Um dies sicherzustellen, sollte man bei Nuget `Cef.Commons` bei beiden Projekten die selbe Version installieren.
