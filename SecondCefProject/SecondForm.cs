@@ -19,8 +19,6 @@ namespace SecondCefProject
         public SecondForm(ChromiumWebBrowser chromeBrowser = null)
         {
             InitializeComponent();
-            // Start the browser after initialize global component
-            InitializeChromium();
 
             var _cefIsInternal = chromeBrowser == null;
             _chromeBrowser = chromeBrowser;
@@ -38,11 +36,6 @@ namespace SecondCefProject
             // Add it to the form and fill it to the form window.
             this.Controls.Add(_chromeBrowser);
             _chromeBrowser.Dock = DockStyle.Fill;
-        }
-
-        public void InitializeChromium()
-        {
-
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
